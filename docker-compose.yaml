@@ -4,6 +4,6 @@ services:
     image: marniecodes/lbg-car-react-starter
     build: ./Frontend
     ports:
-      - target: 8080
-        published: 8081
+      - target: 80
+        published: 80
 
