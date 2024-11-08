@@ -2,6 +2,6 @@
 
 cat >> src/env.js << EOF
 
-const SERVER_URL="${SERVER_URL}:8081";
+const SERVER_URL="${SERVER_URL}:80";
 
 export default SERVER_URL;
