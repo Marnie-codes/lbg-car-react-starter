@@ -5,13 +5,13 @@ FROM node:19-alpine as build
 WORKDIR /app
 
 # only copy package.json
-COPY package.json .
+COPY Frontend/package.json .
 
 # download the project dependencies
 RUN npm install --force
 
 # copy everything from the react app folder to the /app folder in the container
-COPY . .
+COPY Frontend .
 
 ARG SERVER_URL=localhost
 
@@ -25,7 +25,7 @@ RUN npm run build
 FROM nginx:1.23-alpine
 COPY --from=build /app/build /usr/share/nginx/html
 
-COPY nginx/nginx.conf /etc/nginx/conf.d/default.conf
+COPY Frontend/nginx/nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
 
