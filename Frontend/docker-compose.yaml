@@ -1,6 +1,6 @@
 version: "3.8"
 services:
-  lbg-car-react-starter:
+  Frontend:
     image: marniecodes/lbg-car-react-starter
     build: ./lbg-car-react-starter
     ports:
