@@ -1,4 +1,3 @@
-  GNU nano 7.2                                                                                Dockerfile *
 # stage 1
 FROM node:19-alpine as build
 
