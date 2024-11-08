@@ -9,7 +9,7 @@ COPY package.json .
 
 RUN rm -rf node_modules package-lock.json
 # download the project dependencies
-RUN npm install --legacy-peer-deps
+RUN npm install
 
 # copy everything from the react app folder to the /app folder in the container
 COPY . .
