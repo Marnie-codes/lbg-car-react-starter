@@ -14,7 +14,7 @@ RUN npm install --force
 # copy everything from the react app folder to the /app folder in the container
 COPY . .
 
-ARG SERVER_URL=localhost
+ARG SERVER_URL=35.210.241.136
 
 RUN chmod +x set_env.sh
 RUN sh set_env.sh
